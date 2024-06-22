@@ -1,18 +1,39 @@
-﻿namespace Mecanika.Domain.Models
+﻿using Mecanika.Domain.Models.Base;
+
+namespace Mecanika.Domain.Models;
+
+public class Fornecedor : Person
 {
-    public class Fornecedor
+    public string? Cnpj { get; private set; }
+
+    public Fornecedor
+    (
+        string? name,
+        string? phone,
+        string? email,
+        string? address,
+        string? number,
+        string? complement,
+        string? city,
+        string? uf,
+        string? bairro,
+        string? cep,
+        string? cnpj
+    ) :
+        base
+    (
+        name,
+        phone,
+        email,
+        address,
+        number,
+        complement,
+        city,
+        uf,
+        bairro,
+        cep
+    )
     {
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string CNPJ { get; set; }
-        public string Email { get; set; }
-        public string Telefone { get; set; }
-        public string Logradouro { get; set; }
-        public string Numero { get; set; }
-        public string Complemento { get; set; }
-        public string Cidade { get; set; }
-        public string UF { get; set; }
-        public string Bairro { get; set; }
-        public string CEP { get; set; }
+        Cnpj = cnpj;
     }
 }
