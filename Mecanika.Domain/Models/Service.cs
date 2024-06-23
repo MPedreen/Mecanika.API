@@ -8,6 +8,8 @@ namespace Mecanika.Domain.Models
         public string? Description { get; private set; }
         public decimal Price { get; private set; }
         public decimal Duration { get; private set; }
+        public virtual ICollection<Scheduling>? Schedulings { get; private set; }
+        public virtual ICollection<Queue>? Queues { get; private set; }
 
         public Service(string? name, string? description, decimal price, decimal duration)
         {
