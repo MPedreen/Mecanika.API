@@ -3,7 +3,7 @@ public class BaseEntity
 {
     public int Id { get; private set; }
     public DateTime CreatedAt { get; private set; }
-    public DateTime UpdatedAt { get; private set; }
+    public DateTime UpdatedAt { get; protected set; }
     public bool IsActive { get; private set; }
 
     public BaseEntity()
@@ -12,4 +12,7 @@ public class BaseEntity
         UpdatedAt = DateTime.Now;
         IsActive = true;
     }
+
+    public void ActivateOrInactivate()
+        => IsActive = !IsActive;
 }
