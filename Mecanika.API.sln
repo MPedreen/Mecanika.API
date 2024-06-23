@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mecanika.API", "Mecanika.API\Mecanika.API.csproj", "{1050B54F-BD70-492C-9028-DA7B5C80DB3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mecanika.Application", "Mecanika.Application\Mecanika.Application.csproj", "{095F0159-06C6-4EA5-92AA-85F913B6D96B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mecanika.Domain", "Mecanika.Domain\Mecanika.Domain.csproj", "{BA31B39A-17F7-4D1D-B7D7-24E41A7A2CC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mecanika.Infra.Data", "Mecanika.Infra.Data\Mecanika.Infra.Data.csproj", "{DBC37C61-22FE-4656-9017-ACD2BBBA38E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mecanika.Infra.IoC", "Mecanika.Infra.IoC\Mecanika.Infra.IoC.csproj", "{2A289853-BE0C-48A9-B759-20F6EC92FB6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1050B54F-BD70-492C-9028-DA7B5C80DB3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1050B54F-BD70-492C-9028-DA7B5C80DB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1050B54F-BD70-492C-9028-DA7B5C80DB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1050B54F-BD70-492C-9028-DA7B5C80DB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095F0159-06C6-4EA5-92AA-85F913B6D96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095F0159-06C6-4EA5-92AA-85F913B6D96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095F0159-06C6-4EA5-92AA-85F913B6D96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095F0159-06C6-4EA5-92AA-85F913B6D96B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA31B39A-17F7-4D1D-B7D7-24E41A7A2CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA31B39A-17F7-4D1D-B7D7-24E41A7A2CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA31B39A-17F7-4D1D-B7D7-24E41A7A2CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA31B39A-17F7-4D1D-B7D7-24E41A7A2CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC37C61-22FE-4656-9017-ACD2BBBA38E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC37C61-22FE-4656-9017-ACD2BBBA38E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC37C61-22FE-4656-9017-ACD2BBBA38E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC37C61-22FE-4656-9017-ACD2BBBA38E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A289853-BE0C-48A9-B759-20F6EC92FB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A289853-BE0C-48A9-B759-20F6EC92FB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A289853-BE0C-48A9-B759-20F6EC92FB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A289853-BE0C-48A9-B759-20F6EC92FB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A8F43EA-EEBB-4876-BA5A-EC1C52C7CA1B}
+	EndGlobalSection
+EndGlobal

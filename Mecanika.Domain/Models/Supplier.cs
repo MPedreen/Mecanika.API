@@ -2,11 +2,11 @@
 
 namespace Mecanika.Domain.Models;
 
-public class Fornecedor : Person
+public class Supplier : Person
 {
     public string? Cnpj { get; private set; }
 
-    public Fornecedor
+    public Supplier
     (
         string? name,
         string? phone,

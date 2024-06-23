@@ -2,14 +2,15 @@
 
 namespace Mecanika.Domain.Models;
 
-public class Funcionario : Person
+public class Employee : Person
 {
     public DateTime BirthDate { get; private set; }
     public char Gender { get; private set; }
-    public string Cargo { get; private set; }
+    public string JobTitle { get; private set; }
     public int EstablishmentId { get; private set; }
     public virtual Establishment Establishment { get; private set; }
-    public Funcionario
+
+    public Employee
     (
         string? name,
         string? phone,
@@ -42,7 +43,7 @@ public class Funcionario : Person
     {
         BirthDate = birthDate;
         Gender = gender;
-        Cargo = cargo;
+        JobTitle = cargo;
         Establishment = establishment;
     }
 }
