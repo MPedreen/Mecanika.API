@@ -14,6 +14,8 @@ namespace Mecanika.Domain.Models
         public string? UF { get; private set; }
         public string? Bairro { get; private set; }
         public string? Cep { get; private set; }
+        public int? StockId { get; private set; }
+        public virtual Stock? Stock { get; private set; }
 
         public Establishment(
             string? name, 
@@ -38,6 +40,12 @@ namespace Mecanika.Domain.Models
             UF = uF;
             Bairro = bairro;
             Cep = cep;
+        }
+
+        public void LinkStockToEstablishment(int stockId)
+        {
+            StockId = stockId;
+            UpdatedAt = DateTime.UtcNow;
         }
     }
 }

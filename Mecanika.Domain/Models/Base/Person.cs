@@ -9,7 +9,7 @@ public class Person : BaseEntity
     public string? Complement { get; private set; }
     public string? City { get; private set; }
     public string? Uf { get; private set; }
-    public string? Bairro { get; private set; }
+    public string? Neighborhood { get; private set; }
     public string? Cep { get; private set; }
 
     public Person
@@ -34,7 +34,7 @@ public class Person : BaseEntity
         Complement = complement;
         City = city;
         Uf = uf;
-        Bairro = bairro;
+        Neighborhood = bairro;
         Cep = cep;
     }
 }

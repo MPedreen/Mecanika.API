@@ -12,7 +12,7 @@ namespace Mecanika.Domain.Models
         public int ServiceId { get; private set; }
         public virtual Service? Service { get; private set; }
         public int EmployeeId { get; private set; }
-        public virtual Funcionario? Employee { get; private set; }
+        public virtual Employee? Employee { get; private set; }
 
         public Scheduling
         (
@@ -24,7 +24,7 @@ namespace Mecanika.Domain.Models
             int serviceId, 
             Service? service, 
             int employeeId, 
-            Funcionario? employee
+            Employee? employee
         )
         {
             Date = date;

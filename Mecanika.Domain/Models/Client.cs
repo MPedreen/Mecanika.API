@@ -6,7 +6,8 @@ namespace Mecanika.Domain.Models
     {
         public char Gender { get; private set; }
         public string? Cpf { get; private set; }
-        public DateTime BirthDate { get; set; }
+        public DateTime BirthDate { get; private set; }
+        public ICollection<Vehicle> Vehicles { get; private set; }
 
         public Client
         (

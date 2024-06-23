@@ -8,16 +8,16 @@ namespace Mecanika.Domain.Models
         public string? Description { get; private set; }
         public decimal Price { get; private set; }
         public int StockQuantity { get; private set; }
-        public int FornecedorId { get; private set; }
-        public virtual Fornecedor? Fornecedor { get; private set; }
+        public int SupplierId { get; private set; }
+        public virtual Supplier? Supplier { get; private set; }
 
-        public Product(string? name, string? description, decimal price, int stockQuantity, int fornecedorId)
+        public Product(string? name, string? description, decimal price, int stockQuantity, int supplierId)
         {
             Name = name;
             Description = description;
             Price = price;
             StockQuantity = stockQuantity;
-            FornecedorId = fornecedorId;
+            SupplierId = supplierId;
         }
     }
 }
