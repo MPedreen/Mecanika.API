@@ -4,7 +4,7 @@ namespace Mecanika.Domain.Models
 {
     public class Vehicle : BaseEntity
     {
-        public string? Plate { get; private set; }
+        public string? VehicleLicensePlate { get; private set; }
         public string? Model { get; private set; }
         public string? Brand { get; private set; }
         public int Year { get; private set; }
@@ -15,7 +15,7 @@ namespace Mecanika.Domain.Models
 
         public Vehicle
         (
-            string? plate, 
+            string? vehicleLicensePlate, 
             string? model, 
             string? brand,
             int year,
@@ -24,7 +24,7 @@ namespace Mecanika.Domain.Models
             int clientId
         )
         {
-            Plate = plate;
+            VehicleLicensePlate = vehicleLicensePlate;
             Model = model;
             Brand = brand;
             Year = year;

@@ -12,21 +12,22 @@ namespace Mecanika.Domain.Models
         public string? Complement { get; private set; }
         public string? City { get; private set; }
         public string? UF { get; private set; }
-        public string? Bairro { get; private set; }
+        public string? Nighborhood { get; private set; }
         public string? Cep { get; private set; }
         public int? StockId { get; private set; }
         public virtual Stock? Stock { get; private set; }
+        public virtual List<Employee>? Employees { get; private set; }
 
         public Establishment(
-            string? name, 
-            string? cnpj, 
-            string? email, 
-            string? address, 
-            string? number, 
-            string? complement, 
-            string? city, 
-            string? uF, 
-            string? bairro, 
+            string? name,
+            string? cnpj,
+            string? email,
+            string? address,
+            string? number,
+            string? complement,
+            string? city,
+            string? uF,
+            string? neighborhood,
             string? cep
         )
         {
@@ -38,7 +39,7 @@ namespace Mecanika.Domain.Models
             Complement = complement;
             City = city;
             UF = uF;
-            Bairro = bairro;
+            Nighborhood = neighborhood;
             Cep = cep;
         }
 

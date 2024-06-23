@@ -5,6 +5,7 @@ namespace Mecanika.Domain.Models;
 public class Supplier : Person
 {
     public string? Cnpj { get; private set; }
+    public virtual ICollection<Product>? Products { get; private set; }
 
     public Supplier
     (
@@ -16,7 +17,7 @@ public class Supplier : Person
         string? complement,
         string? city,
         string? uf,
-        string? bairro,
+        string? neighborhood,
         string? cep,
         string? cnpj
     ) :
@@ -30,7 +31,7 @@ public class Supplier : Person
         complement,
         city,
         uf,
-        bairro,
+        neighborhood,
         cep
     )
     {
