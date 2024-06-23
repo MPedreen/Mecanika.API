@@ -7,7 +7,7 @@ namespace Mecanika.Domain.Models
         public char Gender { get; private set; }
         public string? Cpf { get; private set; }
         public DateTime BirthDate { get; private set; }
-        public ICollection<Vehicle> Vehicles { get; private set; }
+        public ICollection<Vehicle>? Vehicles { get; private set; }
 
         public Client
         (
@@ -19,7 +19,7 @@ namespace Mecanika.Domain.Models
             string? complement,
             string? city,
             string? uf,
-            string? bairro,
+            string? neighborhood,
             string? cep,
             char gender,
             string? cpf,
@@ -35,7 +35,7 @@ namespace Mecanika.Domain.Models
             complement,
             city,
             uf,
-            bairro,
+            neighborhood,
             cep
         )
         {
