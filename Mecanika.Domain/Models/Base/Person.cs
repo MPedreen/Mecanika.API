@@ -22,7 +22,7 @@ public class Person : BaseEntity
         string? complement, 
         string? city, 
         string? uf, 
-        string? bairro, 
+        string? neighborhood, 
         string? cep
     )
     {
@@ -34,7 +34,7 @@ public class Person : BaseEntity
         Complement = complement;
         City = city;
         Uf = uf;
-        Neighborhood = bairro;
+        Neighborhood = neighborhood;
         Cep = cep;
     }
 }
