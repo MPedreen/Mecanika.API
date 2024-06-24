@@ -2,6 +2,7 @@
 
 public class Queue
 {
+    public int Id { get; private set; }
     public DateTime DateEntry { get; private set; }
     public DateTime? DepartureDate { get; private set; }
     public int QueueNumber { get; private set; }
