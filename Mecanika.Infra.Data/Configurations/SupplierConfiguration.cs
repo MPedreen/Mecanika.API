@@ -3,11 +3,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Mecanika.Infra.Data.Configurations
 {
-    public class SupplierConfiguration
+    internal class SupplierConfiguration
     {
         public void Configure(EntityTypeBuilder<Supplier> builder)
         {
             builder.HasKey(t => t.Id);
+            builder.Property(c => c.IsActive);
+            builder.Property(c => c.CreatedAt);
+            builder.Property(c => c.UpdatedAt);
+
             builder.Property(s => s.Cnpj).HasMaxLength(14).IsRequired();
             builder.Property(s => s.Name).HasMaxLength(100).IsRequired();
             builder.Property(s => s.Phone).HasMaxLength(15).IsRequired();

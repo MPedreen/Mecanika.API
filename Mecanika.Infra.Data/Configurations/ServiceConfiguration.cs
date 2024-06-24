@@ -4,11 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mecanika.Infra.Data.Configurations
 {
-    public class ServiceConfiguration : IEntityTypeConfiguration<Service>
+    internal class ServiceConfiguration : IEntityTypeConfiguration<Service>
     {
         public void Configure(EntityTypeBuilder<Service> builder)
         {
             builder.HasKey(s => s.Id);
+            builder.Property(c => c.IsActive);
+            builder.Property(c => c.CreatedAt);
+            builder.Property(c => c.UpdatedAt);
+
             builder.Property(s => s.Name).HasMaxLength(100).IsRequired();
             builder.Property(s => s.Description).HasMaxLength(200).IsRequired();
             builder.Property(s => s.Price).HasPrecision(10, 2).IsRequired();

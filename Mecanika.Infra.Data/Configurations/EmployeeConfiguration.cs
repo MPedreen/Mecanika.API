@@ -4,11 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mecanika.Infra.Data.Configurations
 {
-    public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
+    internal class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
             builder.HasKey(e => e.Id);
+            builder.Property(c => c.IsActive);
+            builder.Property(c => c.CreatedAt);
+            builder.Property(c => c.UpdatedAt);
+
             builder.Property(e => e.BirthDate);
             builder.Property(e => e.Gender).IsRequired();
             builder.Property(e => e.JobTitle).HasMaxLength(100).IsRequired();

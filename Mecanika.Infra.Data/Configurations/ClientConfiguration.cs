@@ -4,11 +4,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mecanika.Infra.Data.Configurations
 {
-    public class ClientConfiguration : IEntityTypeConfiguration<Client>
+    internal class ClientConfiguration : IEntityTypeConfiguration<Client>
     {
         public void Configure(EntityTypeBuilder<Client> builder)
         {
+            builder.ToTable("Clients");
             builder.HasKey(t => t.Id);
+
+            builder.Property(c => c.IsActive);
+            builder.Property(c => c.CreatedAt);
+            builder.Property(c => c.UpdatedAt);
+
             builder.Property(c => c.Gender).IsRequired();
             builder.Property(c => c.Cpf).HasMaxLength(11).IsRequired();
             builder.Property(c => c.BirthDate);
