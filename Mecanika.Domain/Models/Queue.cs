@@ -4,19 +4,13 @@ public class Queue
 {
     public int Id { get; private set; }
     public DateTime DateEntry { get; private set; }
-    public DateTime? DepartureDate { get; private set; }
-    public int QueueNumber { get; private set; }
-    public int ClientId { get; private set; }
-    public virtual Client? Client { get; private set; }
-    public int ServiceId { get; private set; }
-    public virtual Service? Service { get; private set; }
+    public int Total { get; private set; }
+    public virtual ICollection<Scheduling>? Schedulings { get; private set; }
 
-    public Queue(DateTime dateEntry, DateTime? departureDate, int queueNumber, int clientId, int serviceId)
+    public Queue(int id, DateTime dateEntry, int total)
     {
+        Id = id;
         DateEntry = dateEntry;
-        DepartureDate = departureDate;
-        QueueNumber = queueNumber;
-        ClientId = clientId;
-        ServiceId = serviceId;
+        Total = total;
     }
 }

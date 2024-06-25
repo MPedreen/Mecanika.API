@@ -35,7 +35,6 @@ namespace Mecanika.Domain.Models
             ServiceId = serviceId;
             EmployeeId = employeeId;
             QueueId = queueId;
-
         }
     }
 }
