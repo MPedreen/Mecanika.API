@@ -8,6 +8,7 @@ namespace Mecanika.Infra.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Service> builder)
         {
+            builder.ToTable("Services");
             builder.HasKey(s => s.Id);
             builder.Property(c => c.IsActive);
             builder.Property(c => c.CreatedAt);
@@ -19,7 +20,7 @@ namespace Mecanika.Infra.Data.Configurations
             builder.Property(s => s.Duration).HasPrecision(5, 2).IsRequired();
 
             builder.HasMany(s => s.Schedulings).WithOne(sch => sch.Service).HasForeignKey(sch => sch.ServiceId).OnDelete(DeleteBehavior.Restrict);
-            builder.HasMany(s => s.Queues).WithOne(q => q.Service).HasForeignKey(q => q.ServiceId).OnDelete(DeleteBehavior.Restrict);
+            //builder.HasMany(s => s.Queues).WithOne(q => q.Service).HasForeignKey(q => q.ServiceId).OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

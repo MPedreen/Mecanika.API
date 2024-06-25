@@ -8,6 +8,7 @@ namespace Mecanika.Infra.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Stock> builder)
         {
+            builder.ToTable("Stocks");
             builder.HasKey(s => s.Id);
             builder.Property(c => c.IsActive);
             builder.Property(c => c.CreatedAt);
