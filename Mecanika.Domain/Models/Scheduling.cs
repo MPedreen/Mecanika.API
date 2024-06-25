@@ -4,8 +4,8 @@ namespace Mecanika.Domain.Models
 {
     public class Scheduling : BaseEntity
     {
-        public DateTime Date { get; private set; }
-        public TimeSpan Hour { get; private set; }
+        public TimeSpan InitialServiceHour { get; private set; }
+        public TimeSpan FinalServiceHour { get; private set; }
         public string? Status { get; private set; }
         public int ClientId { get; private set; }
         public virtual Client? Client { get; private set; }
@@ -13,29 +13,29 @@ namespace Mecanika.Domain.Models
         public virtual Service? Service { get; private set; }
         public int EmployeeId { get; private set; }
         public virtual Employee? Employee { get; private set; }
+        public int QueueId { get; private set; }
 
         public Scheduling
         (
-            DateTime date, 
-            TimeSpan hour, 
+            TimeSpan initialHour, 
+            TimeSpan finalHour, 
             string? status, 
             int clientId, 
             Client? client, 
             int serviceId, 
-            Service? service, 
             int employeeId, 
-            Employee? employee
+            int queueId
         )
         {
-            Date = date;
-            Hour = hour;
+            InitialServiceHour = initialHour;
+            FinalServiceHour = finalHour;
             Status = status;
             ClientId = clientId;
             Client = client;
             ServiceId = serviceId;
-            Service = service;
             EmployeeId = employeeId;
-            Employee = employee;
+            QueueId = queueId;
+
         }
     }
 }
