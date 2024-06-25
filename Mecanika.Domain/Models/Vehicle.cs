@@ -4,6 +4,7 @@ namespace Mecanika.Domain.Models
 {
     public class Vehicle : BaseEntity
     {
+        public Guid Id { get; private set; }
         public string? VehicleLicensePlate { get; private set; }
         public string? Model { get; private set; }
         public string? Brand { get; private set; }
