@@ -4,6 +4,7 @@ namespace Mecanika.Domain.Models
 {
     public class Establishment : BaseEntity
     {
+        public int Id { get; private set; }
         public string? Name { get; private set; }
         public string? Cnpj { get; private set; }
         public string? Email { get; private set; }
