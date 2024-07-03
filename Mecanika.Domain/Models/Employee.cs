@@ -8,7 +8,7 @@ public class Employee : Person
     public char Gender { get; private set; }
     public string JobTitle { get; private set; }
     public int EstablishmentId { get; private set; }
-    public virtual Establishment Establishment { get; private set; }
+    public virtual Establishment? Establishment { get; private set; }
 
     public Employee
     (
@@ -25,7 +25,7 @@ public class Employee : Person
         DateTime birthDate,
         char gender,
         string cargo,
-        Establishment establishment
+        int establishmentId
     ) :
         base
     (
@@ -44,6 +44,6 @@ public class Employee : Person
         BirthDate = birthDate;
         Gender = gender;
         JobTitle = cargo;
-        Establishment = establishment;
+        EstablishmentId = establishmentId;
     }
 }
