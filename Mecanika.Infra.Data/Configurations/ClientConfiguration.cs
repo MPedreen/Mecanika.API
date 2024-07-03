@@ -17,7 +17,7 @@ namespace Mecanika.Infra.Data.Configurations
 
             builder.Property(c => c.Gender).IsRequired();
             builder.Property(c => c.Cpf).HasMaxLength(11).IsRequired();
-            builder.Property(c => c.BirthDate);
+            builder.Property(c => c.BirthDate).IsRequired();
             builder.Property(c => c.Name).HasMaxLength(100).IsRequired();
             builder.Property(c => c.Phone).HasMaxLength(15).IsRequired();
             builder.Property(c => c.Email).HasMaxLength(100).IsRequired();

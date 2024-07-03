@@ -4,6 +4,7 @@ namespace Mecanika.Domain.Models
 {
     public class Scheduling : BaseEntity
     {
+        public Guid Id { get; private set; }
         public TimeSpan InitialServiceHour { get; private set; }
         public TimeSpan FinalServiceHour { get; private set; }
         public string? Status { get; private set; }

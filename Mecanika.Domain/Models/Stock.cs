@@ -4,6 +4,7 @@ namespace Mecanika.Domain.Models
 {
     public class Stock : BaseEntity
     {
+        public int Id { get; private set; }
         public int Quantity { get; private set; }
         public DateTime CheckedIn { get; private set; }
         public DateTime? CheckedOut { get; private set; }

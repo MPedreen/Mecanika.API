@@ -1,7 +1,6 @@
 ﻿namespace Mecanika.Domain.Models.Base;
 public class BaseEntity
 {
-    public int Id { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; protected set; }
     public bool IsActive { get; private set; }

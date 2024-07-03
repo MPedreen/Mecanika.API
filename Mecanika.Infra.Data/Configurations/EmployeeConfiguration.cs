@@ -8,12 +8,13 @@ namespace Mecanika.Infra.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
+            builder.ToTable("Employees");
             builder.HasKey(e => e.Id);
             builder.Property(c => c.IsActive);
             builder.Property(c => c.CreatedAt);
             builder.Property(c => c.UpdatedAt);
 
-            builder.Property(e => e.BirthDate);
+            builder.Property(e => e.BirthDate).IsRequired();
             builder.Property(e => e.Gender).IsRequired();
             builder.Property(e => e.JobTitle).HasMaxLength(100).IsRequired();
             builder.Property(s => s.Name).HasMaxLength(100).IsRequired();

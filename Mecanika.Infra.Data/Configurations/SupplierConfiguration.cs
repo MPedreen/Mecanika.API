@@ -1,4 +1,5 @@
 ﻿using Mecanika.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Mecanika.Infra.Data.Configurations
@@ -7,6 +8,7 @@ namespace Mecanika.Infra.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Supplier> builder)
         {
+            builder.ToTable("Suppliers");
             builder.HasKey(t => t.Id);
             builder.Property(c => c.IsActive);
             builder.Property(c => c.CreatedAt);
