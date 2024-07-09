@@ -21,8 +21,7 @@ namespace Mecanika.Domain.Models
             TimeSpan initialHour, 
             TimeSpan finalHour, 
             string? status, 
-            int clientId, 
-            Client? client, 
+            int clientId,
             int serviceId, 
             int employeeId, 
             int queueId
@@ -32,7 +31,6 @@ namespace Mecanika.Domain.Models
             FinalServiceHour = finalHour;
             Status = status;
             ClientId = clientId;
-            Client = client;
             ServiceId = serviceId;
             EmployeeId = employeeId;
             QueueId = queueId;
