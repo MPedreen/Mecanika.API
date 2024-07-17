@@ -1,6 +1,4 @@
-﻿using Mecanika.Domain.Models;
-
-namespace Mecanika.Domain.DTOs.Fetch.Client;
+﻿namespace Mecanika.Domain.DTOs.Fetch.Client;
 public record ClientFetchDTO
 (
     int Id,
