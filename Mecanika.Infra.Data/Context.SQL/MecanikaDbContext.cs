@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Mecanika.Infra.Data.Context
+namespace Mecanika.Infra.Data.Context.SQL
 {
     public class MecanikaDbContext : IdentityDbContext<IdentityUser>
     {
