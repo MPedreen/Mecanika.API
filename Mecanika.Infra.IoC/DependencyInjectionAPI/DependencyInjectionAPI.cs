@@ -1,7 +1,7 @@
-﻿using Mecanika.Infra.Data.Context;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Mecanika.Infra.Data.Context.SQL;
 
 namespace Mecanika.Infra.IoC.DependencyInjectionAPI
 {
